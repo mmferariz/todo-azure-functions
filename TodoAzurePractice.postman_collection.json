@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "489ed640-4093-491f-b69a-eb6e258df242",
+		"name": "TodoAzure Functions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10283029"
+	},
+	"item": [
+		{
+			"name": "createTodo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tarea de prueba\",\r\n    \"description\": \"Descripcion para la tarea\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editTodo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tarea de prueba modificada\",\r\n    \"description\": \"Descripcion para la tarea\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/todo/1c27a25d-38a9-49b7-8f75-340e2b1c5b0a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"todo",
+						"1c27a25d-38a9-49b7-8f75-340e2b1c5b0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTodo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7071/api/todo/14e0d6ea-215f-4e08-812e-a95e9dec595b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"todo",
+						"14e0d6ea-215f-4e08-812e-a95e9dec595b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7071/api/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"todo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
